@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  background-color: #ffffff; /* Bijela pozadina za čistoću */
+  width: 90%; /* Povećavamo širinu za bolju prilagodljivost */
+  max-width: 500px; /* Maksimalna širina na velikim ekranima */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px; /* Zaobljeni kutovi */
+}
+
+/* --- FORMA I UNOS --- */
+.forma {
+  display: flex; /* Koristimo flexbox za lakše poravnavanje */
+  flex-direction: column; /*el jedan ispod drugog*/
+  gap: 10px; /* Razmak između elemenata */
+  margin-bottom: 20px;
+}
+
+.forma label {
+  font-weight: bold;
+  text-align: left;
+}
+.forma select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+.forma button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c3e50; /* Tamno plava/siva */
+  border: none;
+  border-radius: 4px; /* Normalan radius, 70% izgleda kao krug */
+  font-weight: bold;
+  color: white;
+}
+
+.forma button:hover {
+  background-color: #34495e;
+}
+
+/* --- TABLICA --- */
+#divTablice {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+}
+
+th {
+  background-color: #2c3e50;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #ecf0f1; /* Nježna pozadina za parne redove */
+}
+
+tr:hover {
+  background-color: #bdc3c7; /* Naglašeno hover stanje */
+}
+
+/* --- GUMBI U TABLICI (AKCIJE) --- */
+td:last-child {
+  text-align: center; /* Centriranje gumba */
+}
+
+.delete-btn,
+.update-btn {
+  padding: 6px 10px;
+  margin: 3px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  min-width: 80px; /* Malo širi gumbi */
+}
+
+.delete-btn:active,
+.update-btn:active {
+  transform: scale(0.7);
+}
+
+/* --- 1. BRISANJE (Crvena) --- */
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* --- 2. AŽURIRANJE/TOGGLE GUMBI --- */
+.update-btn {
+  color: white;
+}
+
+/* --- 2a. Status: ZAVRŠI (Čekanje - Zelena) --- */
+.status-pending {
+  background-color: #2c3e50;
+}
+
+.status-pending:hover {
+  background-color: #2c3e50;
+}
+
+/* --- 2b. Status: PONIŠTI (Završeno - Plava) --- */
+.status-complete {
+  background-color: #2c3e50; /* Plava za poništavanje */
+  color: white;
+}
+
+.status-complete:hover {
+  background-color: #2c3e50;
+}

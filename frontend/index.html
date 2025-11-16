@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>ToDoApp</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Moja To-Do Lista</h1>
+      <form action="" class="forma">
+        <label for="">Unesite vaš novi zadatak:</label>
+        <br />
+        <input type="text" name="unesiZadatak" id="unesiZadatak" />
+        <br />
+        <label for="">Status</label>
+        <br />
+        <select name="statusZadatka" id="statusZadatka">
+          <option value="0" selected>NE</option>
+          <option value="1">DA</option>
+        </select>
+        <button type="button" onclick="dodajZadatak()">Dodaj</button>
+      </form>
+    </div>
+    <div id="divTablice">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Naziv zadatka</th>
+            <th>Vrijeme</th>
+            <th>Zadatak završen:</th>
+            <th>Akcije</th>
+          </tr>
+        </thead>
+
+        <tbody id="redTablice"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
